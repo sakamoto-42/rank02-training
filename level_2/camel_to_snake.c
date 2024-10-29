@@ -6,7 +6,7 @@
 /*   By: sakamoto-42 <sakamoto-42@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:26:25 by sakamoto-42       #+#    #+#             */
-/*   Updated: 2024/10/29 15:47:29 by sakamoto-42      ###   ########.fr       */
+/*   Updated: 2024/10/29 16:00:18 by sakamoto-42      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,12 @@ int	ft_is_upper(char c)
 int	main(int argc, char **argv)
 {
 	char	*str;
+	int		i;
 
 	if (argc - 1 == 1)
 	{
 		str = argv[1];
+		i = 0;
 		// TESTS //
 		/*
 		if (strcmp(str, "hereIsACamelCaseWord") == 0)
@@ -38,21 +40,16 @@ int	main(int argc, char **argv)
 		if (strcmp(str, "helloWorld") == 0)
 			printf("hello_world\n");
 		*/
-		while (*str && !(ft_is_upper(*str)))
+		while (str[i])
 		{
-			ft_putchar(*str);
-			str++;
-		}
-		while (*str)
-		{
-			if (ft_is_upper(*str))
+			if (ft_is_upper(str[i]) && i != 0)
 			{
 				ft_putchar('_');
-				ft_putchar(*str + 32);
+				ft_putchar(str[i] + 32);
 			}
 			else
-				ft_putchar(*str);
-			str++;
+				ft_putchar(str[i]);
+			i++;
 		}
 	}
 	ft_putchar('\n');
