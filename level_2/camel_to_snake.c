@@ -6,7 +6,7 @@
 /*   By: sakamoto-42 <sakamoto-42@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 15:26:25 by sakamoto-42       #+#    #+#             */
-/*   Updated: 2024/10/29 15:42:59 by sakamoto-42      ###   ########.fr       */
+/*   Updated: 2024/10/29 15:47:29 by sakamoto-42      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ void	ft_putchar(char c)
 
 int	ft_is_upper(char c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
+	return (c >= 'A' && c <= 'Z');
 }
 
 int	main(int argc, char **argv)
