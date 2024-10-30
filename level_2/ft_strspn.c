@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcspn.c                                       :+:      :+:    :+:   */
+/*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakamoto-42 <sakamoto-42@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 09:30:31 by sakamoto-42       #+#    #+#             */
-/*   Updated: 2024/10/30 12:30:51 by sakamoto-42      ###   ########.fr       */
+/*   Created: 2024/10/30 12:12:07 by sakamoto-42       #+#    #+#             */
+/*   Updated: 2024/10/30 12:31:06 by sakamoto-42      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ int	ft_str_find_char(char c, const char *str)
 {
 	while (*str)
 	{
-		if (c == *str)
+		if (*str == c)
 			return (1);
 		str++;
 	}
 	return (0);
 }
 
-size_t	ft_strcspn(const char *s, const char *reject)
+size_t	ft_strspn(const char *s, const char *accept)
 {
 	size_t	count;
 
-	if (!s || !reject)
+	if (!s || !accept)
 		return (0);
 	count = 0;
-	while (*s && !(ft_str_find_char(*s, reject)))
+	while (*s && ft_str_find_char(*s, accept))
 	{
 		count++;
 		s++;
@@ -44,10 +44,10 @@ int	main(int argc, char **argv)
 {
 	if (argc - 1 == 2)
 	{
-		printf("strcspn :%ld\n", strcspn(argv[1], argv[2]));
-		printf("ft_strcspn :%ld\n", ft_strcspn(argv[1], argv[2]));
+		printf("strspn : %ld\n", strspn(argv[1], argv[2]));
+		printf("ft_strspn : %ld\n", ft_strspn(argv[1], argv[2]));
 		return (0);
 	}
-	else
-		return (1);
-}*/
+	return (1);
+}
+*/
