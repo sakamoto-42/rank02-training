@@ -6,7 +6,7 @@
 /*   By: sakamoto-42 <sakamoto-42@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:01:08 by sakamoto-42       #+#    #+#             */
-/*   Updated: 2024/10/30 10:30:03 by sakamoto-42      ###   ########.fr       */
+/*   Updated: 2024/10/30 10:39:56 by sakamoto-42      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ int	main(int argc, char **argv)
 	if (argc - 1 == 1)
 	{
 		dest1 = strdup(argv[1]); 
-		dest2 = ft_strdup(argv[1]); 
-		printf("strdup :\n%s\n", dest1);
+		dest2 = ft_strdup(argv[1]);
+		printf("strdup :\nsrc str : %s\nsrc addr : %p\ndest str : %s\ndest addr : %p\n", argv[1], argv[1], dest1, dest1);
 		free(dest1);
-		printf("ft_strdup :\n%s\n", dest2);
+		printf("\nft_strdup :\nsrc str : %s\nsrc addr : %p\ndest str : %s\ndest addr : %p\n", argv[1], argv[1], dest2, dest2);
 		free(dest2);
 		return (0);
 	}
