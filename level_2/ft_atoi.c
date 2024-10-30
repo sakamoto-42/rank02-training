@@ -6,12 +6,13 @@
 /*   By: sakamoto-42 <sakamoto-42@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 16:48:07 by sakamoto-42       #+#    #+#             */
-/*   Updated: 2024/10/29 16:59:40 by sakamoto-42      ###   ########.fr       */
+/*   Updated: 2024/10/30 09:43:54 by sakamoto-42      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-//#include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void	ft_putchar(char c)
 {
@@ -41,14 +42,13 @@ int	ft_atoi(char *str)
 	return (sign * result);
 }
 
-/*
 int	main(int argc, char **argv)
 {
 	if (argc - 1 == 1)
 	{
 		printf("%s\n", argv[1]);
-		printf("%d\n", ft_atoi(argv[1]));
+		printf("atoi :\n%d\n", atoi(argv[1]));
+		printf("ft_atoi :\n%d\n", ft_atoi(argv[1]));
 	}
 	return (0);
 }
-*/
